@@ -1,0 +1,35 @@
+name: leaklab
+on: push
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: start vulnerable container (privileged, cores enabled)
+        run: |
+          sudo -S -p '' sysctl -w kernel.core_pattern=/tmp/core.%p || true
+          docker run -d --name lab --privileged --cap-add=SYS_PTRACE \
+            -p 8080:80 -v "$PWD/docroot:/var/www/html" \
+            php:8.5.11-apache bash -c "ulimit -c unlimited; apache2-foreground"
+          sleep 6
+          docker exec lab php -v | head -1
+      - name: control - benign multipart upload
+        run: python3 fire.py benign
+      - name: forge x5 with garbage anchor (expect crash signature)
+        run: |
+          for i in 1 2 3 4 5; do
+            echo "=== round $i ==="
+            python3 fire.py forge || true
+            sleep 2
+          done
+          echo '=== apache error.log (segv records) ==='
+          docker exec lab tail -40 /var/log/apache2/error.log
+          echo '=== cores ==='
+          docker exec lab bash -c 'ls -la /tmp/core.* 2>/dev/null; cat /proc/sys/kernel/core_pattern'
+      - name: upload cores as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cores
+          path: /tmp/core.*
+          if-no-files-found: ignore
