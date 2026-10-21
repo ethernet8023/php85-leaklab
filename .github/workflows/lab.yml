@@ -16,11 +16,12 @@ jobs:
       - name: control - benign multipart upload
         run: python3 fire.py benign
       - name: probes - find the write offset
+        timeout-minutes: 6
         run: |
-          echo '=== probe 288B x90 ==='; python3 probe.py 288 90 1.4
-          echo '=== probe 263B x90 ==='; python3 probe.py 263 90 1.4
-          echo '=== probe 200B x90 ==='; python3 probe.py 200 90 1.4
-          echo '=== probe 288B x20 ==='; python3 probe.py 288 20 1.4
+          echo '=== probe 288B x90 ==='; timeout 70 python3 -u probe.py 288 90 1.4
+          echo '=== probe 263B x90 ==='; timeout 70 python3 -u probe.py 263 90 1.4
+          echo '=== probe 200B x90 ==='; timeout 70 python3 -u probe.py 200 90 1.4
+          echo '=== probe 288B x20 ==='; timeout 70 python3 -u probe.py 288 20 1.4
           echo '=== error.log ==='
           docker exec lab tail -30 /var/log/apache2/error.log
           echo '=== cores ==='
