@@ -1,0 +1,272 @@
+lab	Set up job	﻿2026-10-21T10:18:50.6178493Z Current runner version: '2.338.0'
+lab	Set up job	2026-10-21T10:18:50.6218356Z ##[group]Runner Image Provisioner
+lab	Set up job	2026-10-21T10:18:50.6219815Z Hosted Compute Agent
+lab	Set up job	2026-10-21T10:18:50.6221449Z Version: 20261012.601
+lab	Set up job	2026-10-21T10:18:50.6222833Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+lab	Set up job	2026-10-21T10:18:50.6224443Z Build Date: 2026-10-12T17:48:21Z
+lab	Set up job	2026-10-21T10:18:50.6225899Z Worker ID: {b74fbb48-45dd-41b9-9092-6d4ee43606cd}
+lab	Set up job	2026-10-21T10:18:50.6227227Z Region: eastus
+lab	Set up job	2026-10-21T10:18:50.6228320Z Cloud: Azure
+lab	Set up job	2026-10-21T10:18:50.6229446Z ##[endgroup]
+lab	Set up job	2026-10-21T10:18:50.6232543Z ##[group]Operating System
+lab	Set up job	2026-10-21T10:18:50.6233625Z Ubuntu
+lab	Set up job	2026-10-21T10:18:50.6234792Z 24.04.5
+lab	Set up job	2026-10-21T10:18:50.6235907Z LTS
+lab	Set up job	2026-10-21T10:18:50.6236911Z ##[endgroup]
+lab	Set up job	2026-10-21T10:18:50.6238197Z ##[group]Runner Image
+lab	Set up job	2026-10-21T10:18:50.6239326Z Image: ubuntu-24.04
+lab	Set up job	2026-10-21T10:18:50.6240257Z Version: 20261012.334.1
+lab	Set up job	2026-10-21T10:18:50.6242313Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+lab	Set up job	2026-10-21T10:18:50.6246024Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+lab	Set up job	2026-10-21T10:18:50.6247861Z ##[endgroup]
+lab	Set up job	2026-10-21T10:18:50.6250248Z ##[group]GITHUB_TOKEN Permissions
+lab	Set up job	2026-10-21T10:18:50.6253597Z Contents: read
+lab	Set up job	2026-10-21T10:18:50.6255127Z Metadata: read
+lab	Set up job	2026-10-21T10:18:50.6256127Z Packages: read
+lab	Set up job	2026-10-21T10:18:50.6257107Z ##[endgroup]
+lab	Set up job	2026-10-21T10:18:50.6260545Z Secret source: Actions
+lab	Set up job	2026-10-21T10:18:50.6262255Z Cache mode: write
+lab	Set up job	2026-10-21T10:18:50.6263520Z Prepare workflow directory
+lab	Set up job	2026-10-21T10:18:50.6777001Z Prepare all required actions
+lab	Set up job	2026-10-21T10:18:50.6826645Z Getting action download info
+lab	Set up job	2026-10-21T10:18:50.8502499Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+lab	Set up job	2026-10-21T10:18:50.9622340Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+lab	Set up job	2026-10-21T10:18:51.1872651Z Complete job name: lab
+lab	Run actions/checkout@v4	﻿2026-10-21T10:18:51.2671483Z ##[group]Run actions/checkout@v4
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2672423Z with:
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2672923Z   repository: ethernet8023/php85-leaklab
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2677322Z   token: ***
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2677785Z   ssh-strict: true
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2678240Z   ssh-user: git
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2678709Z   persist-credentials: true
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2679214Z   clean: true
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2679673Z   sparse-checkout-cone-mode: true
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2680212Z   fetch-depth: 1
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2680672Z   fetch-tags: false
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2681129Z   show-progress: true
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2681595Z   lfs: false
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2682030Z   submodules: false
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2682521Z   set-safe-directory: true
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2683048Z   allow-unsafe-pr-checkout: false
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.2684107Z ##[endgroup]
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.3734878Z Syncing repository: ethernet8023/php85-leaklab
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.3737705Z ##[group]Getting Git version info
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.3738974Z Working directory is '/home/runner/work/php85-leaklab/php85-leaklab'
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.3740901Z [command]/usr/bin/git version
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.3818326Z git version 2.55.0
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.3845775Z ##[endgroup]
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.3864739Z Temporarily overriding HOME='/home/runner/work/_temp/15dfcfae-2153-46c1-aba3-313f3d77fb23' before making global git config changes
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.3866614Z Adding repository directory to the temporary git global config as a safe directory
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.3873470Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/php85-leaklab/php85-leaklab
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.3936274Z Deleting the contents of '/home/runner/work/php85-leaklab/php85-leaklab'
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.3941642Z ##[group]Initializing the repository
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.3947041Z [command]/usr/bin/git init /home/runner/work/php85-leaklab/php85-leaklab
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4102540Z hint: Using 'master' as the name for the initial branch. This default branch name
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4105480Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4107028Z hint: to use in all of your new repositories, which will suppress this warning,
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4108342Z hint: call:
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4109028Z hint:
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4109840Z hint: 	git config --global init.defaultBranch <name>
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4110820Z hint:
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4111738Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4113391Z hint: 'development'. The just-created branch can be renamed via this command:
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4114886Z hint:
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4115547Z hint: 	git branch -m <name>
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4116305Z hint:
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4117318Z hint: Disable this message with "git config set advice.defaultBranchName false"
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4119243Z Initialized empty Git repository in /home/runner/work/php85-leaklab/php85-leaklab/.git/
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4122080Z [command]/usr/bin/git remote add origin https://github.com/ethernet8023/php85-leaklab
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4175849Z ##[endgroup]
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4177364Z ##[group]Disabling automatic garbage collection
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4178818Z [command]/usr/bin/git config --local gc.auto 0
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4218078Z ##[endgroup]
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4219565Z ##[group]Setting up auth
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4226807Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4274884Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4711496Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4750879Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.4984966Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.5026593Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.5262679Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.5308126Z ##[endgroup]
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.5309137Z ##[group]Fetching the repository
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.5318850Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ad373604fda8510efedf2d986ab18b41535bc1ef:refs/remotes/origin/main
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7335601Z From https://github.com/ethernet8023/php85-leaklab
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7337601Z  * [new ref]         ad373604fda8510efedf2d986ab18b41535bc1ef -> origin/main
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7341729Z ##[endgroup]
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7343632Z ##[group]Determining the checkout info
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7346373Z ##[endgroup]
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7351406Z [command]/usr/bin/git sparse-checkout disable
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7415197Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7452375Z ##[group]Checking out the ref
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7458092Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7526920Z Switched to a new branch 'main'
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7532826Z branch 'main' set up to track 'origin/main'.
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7539886Z ##[endgroup]
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7588090Z [command]/usr/bin/git log -1 --format=%H
+lab	Run actions/checkout@v4	2026-10-21T10:18:51.7616399Z ad373604fda8510efedf2d986ab18b41535bc1ef
+lab	start vulnerable container	﻿2026-10-21T10:18:51.7867040Z ##[group]Run sudo -S -p '' sysctl -w kernel.core_pattern=/tmp/core.%p || true
+lab	start vulnerable container	2026-10-21T10:18:51.7868292Z ^[[36;1msudo -S -p '' sysctl -w kernel.core_pattern=/tmp/core.%p || true^[[0m
+lab	start vulnerable container	2026-10-21T10:18:51.7869322Z ^[[36;1mdocker run -d --name lab --privileged --cap-add=SYS_PTRACE \^[[0m
+lab	start vulnerable container	2026-10-21T10:18:51.7870477Z ^[[36;1m  -p 8080:80 -v "$PWD/docroot:/var/www/html" \^[[0m
+lab	start vulnerable container	2026-10-21T10:18:51.7871406Z ^[[36;1m  php:8.5.11-apache bash -c "ulimit -c unlimited; apache2-foreground"^[[0m
+lab	start vulnerable container	2026-10-21T10:18:51.7872241Z ^[[36;1msleep 6^[[0m
+lab	start vulnerable container	2026-10-21T10:18:51.7872781Z ^[[36;1mdocker exec lab php -v | head -1^[[0m
+lab	start vulnerable container	2026-10-21T10:18:51.8173477Z shell: /usr/bin/bash -e {0}
+lab	start vulnerable container	2026-10-21T10:18:51.8174525Z ##[endgroup]
+lab	start vulnerable container	2026-10-21T10:18:51.8364655Z kernel.core_pattern = /tmp/core.%p
+lab	start vulnerable container	2026-10-21T10:18:51.9457674Z Unable to find image 'php:8.5.11-apache' locally
+lab	start vulnerable container	2026-10-21T10:18:52.2095433Z 8.5.11-apache: Pulling from library/php
+lab	start vulnerable container	2026-10-21T10:18:52.2831525Z f2be67225471: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2833531Z abe29bc31505: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2835474Z e125048ff426: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2836689Z 2881ec96c588: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2837787Z 265049e59bba: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2839920Z ca6bd966c6a0: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2841377Z ac6300157218: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2842604Z ea14f74e863b: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2843889Z 4cf787604624: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2844862Z 2d4b6166069b: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2845792Z 4ed700a10d4c: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2846737Z 5c7206694d70: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2847670Z b9a1d0adf3e4: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2848649Z 4f4fb700ef54: Pulling fs layer
+lab	start vulnerable container	2026-10-21T10:18:52.2849587Z 265049e59bba: Waiting
+lab	start vulnerable container	2026-10-21T10:18:52.2850412Z ca6bd966c6a0: Waiting
+lab	start vulnerable container	2026-10-21T10:18:52.2851237Z ac6300157218: Waiting
+lab	start vulnerable container	2026-10-21T10:18:52.2852143Z ea14f74e863b: Waiting
+lab	start vulnerable container	2026-10-21T10:18:52.2853260Z 2881ec96c588: Waiting
+lab	start vulnerable container	2026-10-21T10:18:52.2854638Z 4cf787604624: Waiting
+lab	start vulnerable container	2026-10-21T10:18:52.2855796Z 2d4b6166069b: Waiting
+lab	start vulnerable container	2026-10-21T10:18:52.2856955Z b9a1d0adf3e4: Waiting
+lab	start vulnerable container	2026-10-21T10:18:52.2858119Z 4f4fb700ef54: Waiting
+lab	start vulnerable container	2026-10-21T10:18:52.2859274Z 5c7206694d70: Waiting
+lab	start vulnerable container	2026-10-21T10:18:52.2860680Z 4ed700a10d4c: Waiting
+lab	start vulnerable container	2026-10-21T10:18:52.3207969Z abe29bc31505: Verifying Checksum
+lab	start vulnerable container	2026-10-21T10:18:52.3460372Z abe29bc31505: Download complete
+lab	start vulnerable container	2026-10-21T10:18:52.3462782Z 2881ec96c588: Verifying Checksum
+lab	start vulnerable container	2026-10-21T10:18:52.3465082Z 2881ec96c588: Download complete
+lab	start vulnerable container	2026-10-21T10:18:52.4025407Z 265049e59bba: Verifying Checksum
+lab	start vulnerable container	2026-10-21T10:18:52.4027972Z 265049e59bba: Download complete
+lab	start vulnerable container	2026-10-21T10:18:52.4337279Z f2be67225471: Verifying Checksum
+lab	start vulnerable container	2026-10-21T10:18:52.4339397Z f2be67225471: Download complete
+lab	start vulnerable container	2026-10-21T10:18:52.4343442Z ca6bd966c6a0: Download complete
+lab	start vulnerable container	2026-10-21T10:18:52.4633666Z ac6300157218: Verifying Checksum
+lab	start vulnerable container	2026-10-21T10:18:52.4636418Z ac6300157218: Download complete
+lab	start vulnerable container	2026-10-21T10:18:52.4969394Z 4cf787604624: Download complete
+lab	start vulnerable container	2026-10-21T10:18:52.5366877Z ea14f74e863b: Verifying Checksum
+lab	start vulnerable container	2026-10-21T10:18:52.5369158Z ea14f74e863b: Download complete
+lab	start vulnerable container	2026-10-21T10:18:52.5744097Z 4ed700a10d4c: Verifying Checksum
+lab	start vulnerable container	2026-10-21T10:18:52.5746024Z 4ed700a10d4c: Download complete
+lab	start vulnerable container	2026-10-21T10:18:52.6091140Z 5c7206694d70: Verifying Checksum
+lab	start vulnerable container	2026-10-21T10:18:52.6100953Z 5c7206694d70: Download complete
+lab	start vulnerable container	2026-10-21T10:18:52.6208336Z 2d4b6166069b: Download complete
+lab	start vulnerable container	2026-10-21T10:18:52.6410512Z b9a1d0adf3e4: Verifying Checksum
+lab	start vulnerable container	2026-10-21T10:18:52.6420819Z b9a1d0adf3e4: Download complete
+lab	start vulnerable container	2026-10-21T10:18:52.6497601Z 4f4fb700ef54: Verifying Checksum
+lab	start vulnerable container	2026-10-21T10:18:52.6503460Z 4f4fb700ef54: Download complete
+lab	start vulnerable container	2026-10-21T10:18:52.9359465Z e125048ff426: Verifying Checksum
+lab	start vulnerable container	2026-10-21T10:18:52.9361944Z e125048ff426: Download complete
+lab	start vulnerable container	2026-10-21T10:18:53.6710073Z f2be67225471: Pull complete
+lab	start vulnerable container	2026-10-21T10:18:56.0481315Z abe29bc31505: Pull complete
+lab	start vulnerable container	2026-10-21T10:18:59.8901135Z e125048ff426: Pull complete
+lab	start vulnerable container	2026-10-21T10:18:59.9043156Z 2881ec96c588: Pull complete
+lab	start vulnerable container	2026-10-21T10:19:00.1900913Z 265049e59bba: Pull complete
+lab	start vulnerable container	2026-10-21T10:19:00.2019568Z ca6bd966c6a0: Pull complete
+lab	start vulnerable container	2026-10-21T10:19:00.2131737Z ac6300157218: Pull complete
+lab	start vulnerable container	2026-10-21T10:19:00.2997640Z ea14f74e863b: Pull complete
+lab	start vulnerable container	2026-10-21T10:19:00.3099327Z 4cf787604624: Pull complete
+lab	start vulnerable container	2026-10-21T10:19:00.7907228Z 2d4b6166069b: Pull complete
+lab	start vulnerable container	2026-10-21T10:19:00.8005245Z 4ed700a10d4c: Pull complete
+lab	start vulnerable container	2026-10-21T10:19:00.8102598Z 5c7206694d70: Pull complete
+lab	start vulnerable container	2026-10-21T10:19:00.8207630Z b9a1d0adf3e4: Pull complete
+lab	start vulnerable container	2026-10-21T10:19:00.8281356Z 4f4fb700ef54: Pull complete
+lab	start vulnerable container	2026-10-21T10:19:00.8334477Z Digest: sha256:47e6d8849049375e0d19e81f1b391ed88828d4653e0d1b00822185b66b564e8b
+lab	start vulnerable container	2026-10-21T10:19:00.8345398Z Status: Downloaded newer image for php:8.5.11-apache
+lab	start vulnerable container	2026-10-21T10:19:00.8504752Z 12590214501bf8edd56c157ea715f77a4a8c3d8623aabda1f72a37ee8a5681b0
+lab	start vulnerable container	2026-10-21T10:19:07.2294812Z PHP 8.5.11 (cli) (built: Oct 21 2026 00:25:58) (NTS)
+lab	control - benign multipart upload	﻿2026-10-21T10:19:07.2468301Z ##[group]Run python3 fire.py benign
+lab	control - benign multipart upload	2026-10-21T10:19:07.2468663Z ^[[36;1mpython3 fire.py benign^[[0m
+lab	control - benign multipart upload	2026-10-21T10:19:07.2535941Z shell: /usr/bin/bash -e {0}
+lab	control - benign multipart upload	2026-10-21T10:19:07.2536239Z ##[endgroup]
+lab	control - benign multipart upload	2026-10-21T10:19:07.3018651Z MODE=benign SID=atlas6463bf144a354cc6b38d4b47 STATUS=HTTP/1.1 200 OK ERR=None BYTES=366
+lab	control - benign multipart upload	2026-10-21T10:19:07.3019494Z BODYTAIL: SID=atlas6463bf144a354cc6b38d4b47 NPOST=2 NOPROGRESS keys=[] 
+lab	probes - find the write offset	﻿2026-10-21T10:19:07.3129589Z ##[group]Run echo '=== probe 288B x90 ==='; timeout 70 python3 -u probe.py 288 90 1.4
+lab	probes - find the write offset	2026-10-21T10:19:07.3130209Z ^[[36;1mecho '=== probe 288B x90 ==='; timeout 70 python3 -u probe.py 288 90 1.4^[[0m
+lab	probes - find the write offset	2026-10-21T10:19:07.3130701Z ^[[36;1mecho '=== probe 263B x90 ==='; timeout 70 python3 -u probe.py 263 90 1.4^[[0m
+lab	probes - find the write offset	2026-10-21T10:19:07.3131160Z ^[[36;1mecho '=== probe 200B x90 ==='; timeout 70 python3 -u probe.py 200 90 1.4^[[0m
+lab	probes - find the write offset	2026-10-21T10:19:07.3131652Z ^[[36;1mecho '=== probe 288B x20 ==='; timeout 70 python3 -u probe.py 288 20 1.4^[[0m
+lab	probes - find the write offset	2026-10-21T10:19:07.3132053Z ^[[36;1mecho '=== error.log ==='^[[0m
+lab	probes - find the write offset	2026-10-21T10:19:07.3132410Z ^[[36;1mdocker exec lab tail -30 /var/log/apache2/error.log^[[0m
+lab	probes - find the write offset	2026-10-21T10:19:07.3132742Z ^[[36;1mecho '=== cores ==='^[[0m
+lab	probes - find the write offset	2026-10-21T10:19:07.3133081Z ^[[36;1mdocker exec lab bash -c 'ls -la /tmp/core.* 2>/dev/null' || true^[[0m
+lab	probes - find the write offset	2026-10-21T10:19:07.3200167Z shell: /usr/bin/bash -e {0}
+lab	probes - find the write offset	2026-10-21T10:19:07.3200470Z ##[endgroup]
+lab	probes - find the write offset	2026-10-21T10:19:07.3291723Z === probe 288B x90 ===
+lab	probes - find the write offset	2026-10-21T10:19:07.3539023Z   [connected, sending phase1]
+lab	probes - find the write offset	2026-10-21T10:19:08.7556909Z   [sent tail, waiting response]
+lab	probes - find the write offset	2026-10-21T10:19:08.7570403Z ### PROBE spray_len=288 nspray=90 SID=probe7aa551c221344412a2f38301a4 ERR=None
+lab	probes - find the write offset	2026-10-21T10:19:08.7571440Z SID=e4232221032f264b5bdac8316d6ecf8f NPOST=3
+lab	probes - find the write offset	2026-10-21T10:19:08.7571962Z BASELEN=290
+lab	probes - find the write offset	2026-10-21T10:19:08.7572319Z NOPROGRESS keys=[]
+lab	probes - find the write offset	2026-10-21T10:19:08.7572546Z 
+lab	probes - find the write offset	2026-10-21T10:19:08.7640026Z === probe 263B x90 ===
+lab	probes - find the write offset	2026-10-21T10:19:08.7878441Z   [connected, sending phase1]
+lab	probes - find the write offset	2026-10-21T10:19:10.1896223Z   [sent tail, waiting response]
+lab	probes - find the write offset	2026-10-21T10:19:10.1925020Z ### PROBE spray_len=263 nspray=90 SID=probec0893da8d05b4be49fc6c4d981 ERR=None
+lab	probes - find the write offset	2026-10-21T10:19:10.1925902Z SID=db875794b740812fa5d743aee5296761 NPOST=3
+lab	probes - find the write offset	2026-10-21T10:19:10.1926378Z BASELEN=265
+lab	probes - find the write offset	2026-10-21T10:19:10.1926714Z NOPROGRESS keys=[]
+lab	probes - find the write offset	2026-10-21T10:19:10.1926927Z 
+lab	probes - find the write offset	2026-10-21T10:19:10.1967230Z === probe 200B x90 ===
+lab	probes - find the write offset	2026-10-21T10:19:10.2211789Z   [connected, sending phase1]
+lab	probes - find the write offset	2026-10-21T10:19:11.6229211Z   [sent tail, waiting response]
+lab	probes - find the write offset	2026-10-21T10:19:11.6245619Z ### PROBE spray_len=200 nspray=90 SID=probe3ca21763eee64413a0d9d4570d ERR=None
+lab	probes - find the write offset	2026-10-21T10:19:11.6246322Z SID=1d2d25740539891a27c296ad3fc957d2 NPOST=3
+lab	probes - find the write offset	2026-10-21T10:19:11.6246645Z BASELEN=202
+lab	probes - find the write offset	2026-10-21T10:19:11.6246857Z NOPROGRESS keys=[]
+lab	probes - find the write offset	2026-10-21T10:19:11.6246997Z 
+lab	probes - find the write offset	2026-10-21T10:19:11.6295923Z === probe 288B x20 ===
+lab	probes - find the write offset	2026-10-21T10:19:11.6533927Z   [connected, sending phase1]
+lab	probes - find the write offset	2026-10-21T10:19:13.0552271Z   [sent tail, waiting response]
+lab	probes - find the write offset	2026-10-21T10:19:13.0562499Z ### PROBE spray_len=288 nspray=20 SID=probed8f94dc1525944dd8828604b44 ERR=None
+lab	probes - find the write offset	2026-10-21T10:19:13.0564706Z SID=0454223a180e97aa9acb14fad63c048b NPOST=3
+lab	probes - find the write offset	2026-10-21T10:19:13.0565234Z BASELEN=290
+lab	probes - find the write offset	2026-10-21T10:19:13.0565582Z NOPROGRESS keys=[]
+lab	probes - find the write offset	2026-10-21T10:19:13.0565819Z 
+lab	probes - find the write offset	2026-10-21T10:19:13.0613770Z === error.log ===
+lab	probes - find the write offset	2026-10-21T10:25:19.8202249Z ##[error]The action 'probes - find the write offset' has timed out after 6 minutes.
+lab	cores artifact	﻿2026-10-21T10:25:19.8276627Z ##[group]Run actions/upload-artifact@v4
+lab	cores artifact	2026-10-21T10:25:19.8276936Z with:
+lab	cores artifact	2026-10-21T10:25:19.8277116Z   name: cores
+lab	cores artifact	2026-10-21T10:25:19.8277301Z   path: cores/
+lab	cores artifact	2026-10-21T10:25:19.8277501Z   if-no-files-found: ignore
+lab	cores artifact	2026-10-21T10:25:19.8277737Z   compression-level: 6
+lab	cores artifact	2026-10-21T10:25:19.8277951Z   overwrite: false
+lab	cores artifact	2026-10-21T10:25:19.8278157Z   include-hidden-files: false
+lab	cores artifact	2026-10-21T10:25:19.8278393Z ##[endgroup]
+lab	cores artifact	2026-10-21T10:25:19.9945576Z (node:2665) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+lab	cores artifact	2026-10-21T10:25:19.9946493Z (Use `node --trace-deprecation ...` to show where the warning was created)
+lab	cores artifact	2026-10-21T10:25:20.0052038Z No files were found with the provided path: cores/. No artifacts will be uploaded.
+lab	save cores from container	﻿2026-10-21T10:25:20.0159360Z ##[group]Run docker cp lab:/tmp/core-cores ./cores 2>/dev/null; docker exec lab bash -c 'cp /tmp/core.* /var/www/html/ 2>/dev/null' || true; mkdir -p cores; docker cp lab:/var/www/html ./cores/www 2>/dev/null || true
+lab	save cores from container	2026-10-21T10:25:20.0160826Z ^[[36;1mdocker cp lab:/tmp/core-cores ./cores 2>/dev/null; docker exec lab bash -c 'cp /tmp/core.* /var/www/html/ 2>/dev/null' || true; mkdir -p cores; docker cp lab:/var/www/html ./cores/www 2>/dev/null || true^[[0m
+lab	save cores from container	2026-10-21T10:25:20.0227155Z shell: /usr/bin/bash -e {0}
+lab	save cores from container	2026-10-21T10:25:20.0227596Z ##[endgroup]
+lab	save cores from container	2026-10-21T10:25:20.0576030Z ##[error]Process completed with exit code 1.
+lab	Post Run actions/checkout@v4	﻿2026-10-21T10:25:20.0717448Z Post job cleanup.
+lab	Post Run actions/checkout@v4	2026-10-21T10:25:20.1680985Z [command]/usr/bin/git version
+lab	Post Run actions/checkout@v4	2026-10-21T10:25:20.1703899Z git version 2.55.0
+lab	Post Run actions/checkout@v4	2026-10-21T10:25:20.1749168Z Temporarily overriding HOME='/home/runner/work/_temp/7aaae759-8ec7-4ffc-84cd-930a4e6139e4' before making global git config changes
+lab	Post Run actions/checkout@v4	2026-10-21T10:25:20.1751148Z Adding repository directory to the temporary git global config as a safe directory
+lab	Post Run actions/checkout@v4	2026-10-21T10:25:20.1756054Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/php85-leaklab/php85-leaklab
+lab	Post Run actions/checkout@v4	2026-10-21T10:25:20.1799237Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+lab	Post Run actions/checkout@v4	2026-10-21T10:25:20.1835316Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+lab	Post Run actions/checkout@v4	2026-10-21T10:25:20.2092243Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+lab	Post Run actions/checkout@v4	2026-10-21T10:25:20.2127054Z http.https://github.com/.extraheader
+lab	Post Run actions/checkout@v4	2026-10-21T10:25:20.2139306Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+lab	Post Run actions/checkout@v4	2026-10-21T10:25:20.2180451Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+lab	Post Run actions/checkout@v4	2026-10-21T10:25:20.2444895Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+lab	Post Run actions/checkout@v4	2026-10-21T10:25:20.2484177Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+lab	Complete job	﻿2026-10-21T10:25:20.2918512Z Cleaning up orphan processes
+lab	Complete job	2026-10-21T10:25:20.3314377Z Terminate orphan process: pid (2513) (docker)
+lab	Complete job	2026-10-21T10:25:20.3431204Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
