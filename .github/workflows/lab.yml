@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: start vulnerable container (privileged, cores enabled)
+      - name: start vulnerable container
         run: |
           sudo -S -p '' sysctl -w kernel.core_pattern=/tmp/core.%p || true
           docker run -d --name lab --privileged --cap-add=SYS_PTRACE \
@@ -15,21 +15,20 @@ jobs:
           docker exec lab php -v | head -1
       - name: control - benign multipart upload
         run: python3 fire.py benign
-      - name: forge x5 with garbage anchor (expect crash signature)
+      - name: probes - find the write offset
         run: |
-          for i in 1 2 3 4 5; do
-            echo "=== round $i ==="
-            python3 fire.py forge || true
-            sleep 2
-          done
-          echo '=== apache error.log (segv records) ==='
-          docker exec lab tail -40 /var/log/apache2/error.log
+          echo '=== probe 288B x90 ==='; python3 probe.py 288 90 1.4
+          echo '=== probe 263B x90 ==='; python3 probe.py 263 90 1.4
+          echo '=== probe 200B x90 ==='; python3 probe.py 200 90 1.4
+          echo '=== probe 288B x20 ==='; python3 probe.py 288 20 1.4
+          echo '=== error.log ==='
+          docker exec lab tail -30 /var/log/apache2/error.log
           echo '=== cores ==='
-          docker exec lab bash -c 'ls -la /tmp/core.* 2>/dev/null; cat /proc/sys/kernel/core_pattern'
-      - name: upload cores as artifact
+          docker exec lab bash -c 'ls -la /tmp/core.* 2>/dev/null' || true
+      - name: cores artifact
         if: always()
         uses: actions/upload-artifact@v4
-        with:
-          name: cores
-          path: /tmp/core.*
-          if-no-files-found: ignore
+        with: {name: cores, path: cores/, if-no-files-found: ignore}
+      - name: save cores from container
+        if: always()
+        run: docker cp lab:/tmp/core-cores ./cores 2>/dev/null; docker exec lab bash -c 'cp /tmp/core.* /var/www/html/ 2>/dev/null' || true; mkdir -p cores; docker cp lab:/var/www/html ./cores/www 2>/dev/null || true
