@@ -17,7 +17,7 @@ def send(host, port, head, phase1, tail, stall=1.4):
     try:
         while True:
             d = s.recv(65536)
-            if not d: dead = True; break
+            if not d: break  # Connection: close = normal EOF
             out += d
     except socket.timeout: pass
     s.close()
